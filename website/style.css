@@ -1,0 +1,332 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: hsl(224, 68%, 85%);
+    overflow: hidden;
+}
+
+/* Centering */
+
+.container
+{
+  
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma,  Verdana, sans-serif;
+    overflow: scroll;
+}
+
+#grid{
+    height: auto;
+    width: 60%;
+    display: grid;
+    justify-items: center;
+    position: relative;
+    top: 5%;
+}
+
+#app{
+    width: auto;
+    max-height: 500px;
+    max-width: 500px;
+    min-width: 350px;
+    display: grid;
+    background: #0c0c0c;
+    color: #ffffff;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 10%;
+    box-shadow: 5px 10px 20px black;
+    padding: 30px;
+    position: relative;
+}
+
+.holder.entry {
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    width: 70%;
+    background: rgb(231, 233, 143);
+    color: #000000;
+    justify-content: flex-start;
+    font-size: 14px;
+    margin: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    z-index: -1;
+    padding-top: 30px;
+    top: -25vh;
+    max-width: 300px;
+    padding-left:2vw;
+    padding-right: 2vw;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    box-shadow: 5px 10px 20px black;
+    visibility: hidden;
+}
+
+.holder.entry.active {
+    position: relative;
+    z-index: -1;
+    top: -.5vh;
+    transition: ease-in 1s;
+    visibility: visible;
+}
+
+#entryHolder{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+    justify-content: flex-start;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+#feelings {
+    display: flex;
+    flex-direction: column;
+    height:1 px;
+    max-width: 300px;
+    width: 80%;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 7%;
+    background: rgb(255, 255, 255);
+    color: #000000;
+    justify-content: center;
+    font-size: 20px;
+    height: auto;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#zip{
+    max-width: 300px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin-bottom: 20px;
+}
+
+#date{
+    margin-bottom: 5px;
+}
+
+#temp{
+    margin-bottom: 5px;
+    }
+
+.entry{
+    background: rgba(59, 74, 107, .4);
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label{
+    display:block;
+    font-size: 27px;
+}
+
+input{
+    display:block;
+    height: 60px;
+    width: 80%;
+    margin: auto;
+    margin-top: 2.5%;
+    background:hsl(0, 0%, 100%);
+    color: #000000;
+    font-size: 20px;
+   
+}
+
+button{
+    width: 25%;
+    min-width: 100px;
+    height: 70px;
+    background: #ad1010;
+    color: #ffffff;
+    font-size: 100%;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+    border-radius: 20%;
+}
+
+
+button:hover{ 
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+button:active{
+    background: #272a2e;
+    box-shadow: 2px 4px 5px #444;
+    transform: translateY(4px);
+}
+
+.holder.headline{
+    margin-top: -20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+textarea{
+    background:#22b2da;
+    color: #f0d43a;
+    font-size: 20px;
+
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: gray; 
+    font-size: 16px;
+    
+
+} 
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: #f0d43a; 
+  
+
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: #f0d43a; 
+    
+
+} 
+
+/*Sky Animation*/
+.ground1 {
+    width:2000px;
+    height: 2000px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: green;
+    top: 68%;
+    left: -50%;
+    z-index: -10;
+    box-shadow: 5px 10px 20px black;
+}
+
+.ground2 {
+    width:2000px;
+    height: 2000px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: green;
+    top: 77%;
+    left: -5%;
+    z-index: -11;
+}
+
+.cloud1 {
+    font-size: 150px;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: -2;
+    animation: float1 15s linear 0s infinite running;
+    top: 5%;
+}
+
+.cloud2 {
+    font-size: 250px;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: -4;
+    animation: float2 20s linear 0s infinite running;
+    top: -7%;
+}
+
+.cloud3 {
+    font-size: 170px;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: -3;
+    animation: float3 40s linear 0s infinite running;
+    top: 3%;
+}
+
+@keyframes float1 {
+  0% {
+    right: -5%;
+  }
+  100% {
+    right: 110%;
+  }
+}
+
+@keyframes float2 {
+    0% {
+      left: -10%;
+    }
+    100% {
+      left: 110%;
+    }
+  }
+
+@keyframes float3 {
+    0% {
+      right: -30%;
+    }
+    100% {
+      right: 110%;
+    }
+  }
+  .sun {
+    font-size: 170px;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    color: rgb(255, 196, 0);
+    position: absolute;
+    text-align: center;
+    z-index: -5;
+    animation: alt linear infinite 10s;
+    top:-5%;
+    left: 70%;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    width: 256px;
+    height: 256px;
+}
+
+@keyframes alt {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Weather Journal</title>
+<link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+ <body>
+   <!--Animation Particles-->
+   <div class="cloud1">&#x2601</div>
+   <div class="cloud2">&#x2601</div>
+   <div class="cloud3">&#x2601</div>
+   <div class="sun">&#x2600</div>
+   <div class="ground1"></div>
+   <div class="ground2"></div>
+   <div class="container">
+    <div id="grid">
+<div id = "app">
+
+  <div class ="holder headline">
+    <h1> Weather Journal App</h1>
+   
+  </div>
+
+  <div class ="holder zip">
+    <label for="zip">Enter Zipcode here</label>
+    <input type="text" id="zip" placeholder="enter zip code here" autocomplete="off">
+  </div>
+
+  <div class ="holder feel">
+    <label for="feelings">How are you feeling today?</label>
+    <textarea class= "myInput" id="feelings" placeholder="Enter your feelings here" rows="2" cols="50"></textarea>
+    <button id="generate" type = "submit"> Generate </button>
+ </div>
+
+  
+  </div>
+  <div class ="holder entry">
+   <div id = "entryHolder">
+    <div id = "date"></div> 
+   <div id = "temp"></div>
+   <div id = "content"></div>
+  </div>
+  </div>
+</div>
+</div>
+<script src="app.js" type="text/javascript"></script>
+
+</body>
+</html>
